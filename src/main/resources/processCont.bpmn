@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn2:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.omg.org/bpmn20" xmlns:bpmn2="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:bpsim="http://www.bpsim.org/schemas/1.0" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:drools="http://www.jboss.org/drools" id="_oVNVwETGEe2rVOFBW7eadw" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL BPMN20.xsd http://www.jboss.org/drools drools.xsd http://www.bpsim.org/schemas/1.0 bpsim.xsd http://www.omg.org/spec/DD/20100524/DC DC.xsd http://www.omg.org/spec/DD/20100524/DI DI.xsd " exporter="jBPM Process Modeler" exporterVersion="2.0" targetNamespace="http://www.omg.org/bpmn20">
+  <bpmn2:itemDefinition id="_predioOutItem" structureRef="com.Predio"/>
+  <bpmn2:itemDefinition id="_predioPersonaOutItem" structureRef="com.Predio_Persona"/>
+  <bpmn2:itemDefinition id="_solicitanteOutItem" structureRef="com.Solicitante"/>
+  <bpmn2:itemDefinition id="_solicitudOutItem" structureRef="com.Solicitud"/>
+  <bpmn2:itemDefinition id="_tramiteOutItem" structureRef="com.Tramite"/>
+  <bpmn2:itemDefinition id="_conProOutItem" structureRef="Integer"/>
+  <bpmn2:itemDefinition id="_IDTramiteOutItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="_IDSolicitudOutItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Predio-ResultInputXItem" structureRef="com.Predio"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_P-Persona-ResultInputXItem" structureRef="com.Predio_Persona"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitante-ResultInputXItem" structureRef="com.Solicitante"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitud-ResultInputXItem" structureRef="com.Solicitud"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Tramite-ResultInputXItem" structureRef="com.Tramite"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-SolicitudOutputXItem" structureRef="String"/>
+  <bpmn2:itemDefinition id="__23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-TramiteOutputXItem" structureRef="String"/>
+  <bpmn2:process id="SistemaNacionalCatastral.processCont" drools:packageName="org.jbpm" drools:version="1.0" drools:adHoc="false" name="processCont" isExecutable="true" processType="Public">
+    <bpmn2:property id="predioOut" itemSubjectRef="_predioOutItem" name="predioOut"/>
+    <bpmn2:property id="predioPersonaOut" itemSubjectRef="_predioPersonaOutItem" name="predioPersonaOut"/>
+    <bpmn2:property id="solicitanteOut" itemSubjectRef="_solicitanteOutItem" name="solicitanteOut"/>
+    <bpmn2:property id="solicitudOut" itemSubjectRef="_solicitudOutItem" name="solicitudOut"/>
+    <bpmn2:property id="tramiteOut" itemSubjectRef="_tramiteOutItem" name="tramiteOut"/>
+    <bpmn2:property id="conProOut" itemSubjectRef="_conProOutItem" name="conProOut"/>
+    <bpmn2:property id="IDTramiteOut" itemSubjectRef="_IDTramiteOutItem" name="IDTramiteOut"/>
+    <bpmn2:property id="IDSolicitudOut" itemSubjectRef="_IDSolicitudOutItem" name="IDSolicitudOut"/>
+    <bpmn2:sequenceFlow id="_7B123E02-9FD0-4313-AAD7-D3386139B66C" sourceRef="_23341BB2-381E-47DC-B17B-6EF02E4BB293" targetRef="_3A037E6E-56DB-4114-8EB8-0D4BED30FB17"/>
+    <bpmn2:sequenceFlow id="_C2D83ADD-FDBA-4DBC-94CF-EA75A63876C6" sourceRef="_46CE77CC-B374-4BA6-9C0D-D702737A81AE" targetRef="_23341BB2-381E-47DC-B17B-6EF02E4BB293"/>
+    <bpmn2:sequenceFlow id="_BC0F3ED2-F4AC-40A1-B41A-9C1BCEA7CD88" sourceRef="_E80652AB-2F39-4728-9DE6-C0DCB425CA8B" targetRef="_2F97A8A6-DF3E-48B4-BB93-DAD68F63C6D1">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_DEF63DC2-D3A5-44EC-8A68-991FC1A0B242" sourceRef="_27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964" targetRef="_E80652AB-2F39-4728-9DE6-C0DCB425CA8B">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:sequenceFlow id="_E4B668AA-1B19-4BA6-AA0E-43ADA7DBFF20" sourceRef="_3A037E6E-56DB-4114-8EB8-0D4BED30FB17" targetRef="_27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964">
+      <bpmn2:extensionElements>
+        <drools:metaData name="isAutoConnection.source">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+        <drools:metaData name="isAutoConnection.target">
+          <drools:metaValue><![CDATA[true]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+    </bpmn2:sequenceFlow>
+    <bpmn2:endEvent id="_2F97A8A6-DF3E-48B4-BB93-DAD68F63C6D1">
+      <bpmn2:incoming>_BC0F3ED2-F4AC-40A1-B41A-9C1BCEA7CD88</bpmn2:incoming>
+    </bpmn2:endEvent>
+    <bpmn2:startEvent id="_46CE77CC-B374-4BA6-9C0D-D702737A81AE">
+      <bpmn2:outgoing>_C2D83ADD-FDBA-4DBC-94CF-EA75A63876C6</bpmn2:outgoing>
+    </bpmn2:startEvent>
+    <bpmn2:callActivity id="_3A037E6E-56DB-4114-8EB8-0D4BED30FB17" drools:independent="false" drools:waitForCompletion="true" name="Asignación" calledElement="SistemaNacionalCatastral.processAsig">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Asignación]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_7B123E02-9FD0-4313-AAD7-D3386139B66C</bpmn2:incoming>
+      <bpmn2:outgoing>_E4B668AA-1B19-4BA6-AA0E-43ADA7DBFF20</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_23341BB2-381E-47DC-B17B-6EF02E4BB293" drools:independent="false" drools:waitForCompletion="true" name="Radicacion" calledElement="SistemaNacionalCatastral.Radicacion">
+      <bpmn2:documentation id="_oVNVwUTGEe2rVOFBW7eadw"><![CDATA[Este subproceso inicia la gestión catastral a nivel de conservación.]]></bpmn2:documentation>
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Radicacion]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_C2D83ADD-FDBA-4DBC-94CF-EA75A63876C6</bpmn2:incoming>
+      <bpmn2:outgoing>_7B123E02-9FD0-4313-AAD7-D3386139B66C</bpmn2:outgoing>
+      <bpmn2:ioSpecification id="_oVNVwkTGEe2rVOFBW7eadw">
+        <bpmn2:dataInput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_Predio-ResultInputX" drools:dtype="com.Predio" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Predio-ResultInputXItem" name="Predio Result"/>
+        <bpmn2:dataInput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_P-Persona-ResultInputX" drools:dtype="com.Predio_Persona" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_P-Persona-ResultInputXItem" name="P Persona Result"/>
+        <bpmn2:dataInput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitante-ResultInputX" drools:dtype="com.Solicitante" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitante-ResultInputXItem" name="Solicitante Result"/>
+        <bpmn2:dataInput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitud-ResultInputX" drools:dtype="com.Solicitud" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitud-ResultInputXItem" name="Solicitud Result"/>
+        <bpmn2:dataInput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_Tramite-ResultInputX" drools:dtype="com.Tramite" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_Tramite-ResultInputXItem" name="Tramite Result"/>
+        <bpmn2:dataOutput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-SolicitudOutputX" drools:dtype="String" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-SolicitudOutputXItem" name="ID Solicitud"/>
+        <bpmn2:dataOutput id="_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-TramiteOutputX" drools:dtype="String" itemSubjectRef="__23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-TramiteOutputXItem" name="ID Tramite"/>
+        <bpmn2:inputSet id="_oVNVw0TGEe2rVOFBW7eadw">
+          <bpmn2:dataInputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Predio-ResultInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_P-Persona-ResultInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitante-ResultInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitud-ResultInputX</bpmn2:dataInputRefs>
+          <bpmn2:dataInputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Tramite-ResultInputX</bpmn2:dataInputRefs>
+        </bpmn2:inputSet>
+        <bpmn2:outputSet id="_oVN80ETGEe2rVOFBW7eadw">
+          <bpmn2:dataOutputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-SolicitudOutputX</bpmn2:dataOutputRefs>
+          <bpmn2:dataOutputRefs>_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-TramiteOutputX</bpmn2:dataOutputRefs>
+        </bpmn2:outputSet>
+      </bpmn2:ioSpecification>
+      <bpmn2:dataInputAssociation id="_oVN80UTGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>predioOut</bpmn2:sourceRef>
+        <bpmn2:targetRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Predio-ResultInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_oVN80kTGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>predioPersonaOut</bpmn2:sourceRef>
+        <bpmn2:targetRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_P-Persona-ResultInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_oVN800TGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>solicitanteOut</bpmn2:sourceRef>
+        <bpmn2:targetRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitante-ResultInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_oVN81ETGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>solicitudOut</bpmn2:sourceRef>
+        <bpmn2:targetRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Solicitud-ResultInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataInputAssociation id="_oVN81UTGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>tramiteOut</bpmn2:sourceRef>
+        <bpmn2:targetRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_Tramite-ResultInputX</bpmn2:targetRef>
+      </bpmn2:dataInputAssociation>
+      <bpmn2:dataOutputAssociation id="_oVN81kTGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-SolicitudOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>IDSolicitudOut</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+      <bpmn2:dataOutputAssociation id="_oVN810TGEe2rVOFBW7eadw">
+        <bpmn2:sourceRef>_23341BB2-381E-47DC-B17B-6EF02E4BB293_ID-TramiteOutputX</bpmn2:sourceRef>
+        <bpmn2:targetRef>IDTramiteOut</bpmn2:targetRef>
+      </bpmn2:dataOutputAssociation>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_E80652AB-2F39-4728-9DE6-C0DCB425CA8B" drools:independent="false" drools:waitForCompletion="true" name="Validación" calledElement="SistemaNacionalCatastral.processVal">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Validación]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_DEF63DC2-D3A5-44EC-8A68-991FC1A0B242</bpmn2:incoming>
+      <bpmn2:outgoing>_BC0F3ED2-F4AC-40A1-B41A-9C1BCEA7CD88</bpmn2:outgoing>
+    </bpmn2:callActivity>
+    <bpmn2:callActivity id="_27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964" drools:independent="false" drools:waitForCompletion="true" name="Ejecución" calledElement="">
+      <bpmn2:extensionElements>
+        <drools:metaData name="elementname">
+          <drools:metaValue><![CDATA[Ejecución]]></drools:metaValue>
+        </drools:metaData>
+      </bpmn2:extensionElements>
+      <bpmn2:incoming>_E4B668AA-1B19-4BA6-AA0E-43ADA7DBFF20</bpmn2:incoming>
+      <bpmn2:outgoing>_DEF63DC2-D3A5-44EC-8A68-991FC1A0B242</bpmn2:outgoing>
+    </bpmn2:callActivity>
+  </bpmn2:process>
+  <bpmndi:BPMNDiagram id="_oVN82ETGEe2rVOFBW7eadw">
+    <bpmndi:BPMNPlane id="_oVN82UTGEe2rVOFBW7eadw" bpmnElement="SistemaNacionalCatastral.processCont">
+      <bpmndi:BPMNShape id="shape__27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964" bpmnElement="_27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964">
+        <dc:Bounds height="101.0" width="153.0" x="894.0" y="112.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__E80652AB-2F39-4728-9DE6-C0DCB425CA8B" bpmnElement="_E80652AB-2F39-4728-9DE6-C0DCB425CA8B">
+        <dc:Bounds height="101.0" width="153.0" x="1127.0" y="112.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__23341BB2-381E-47DC-B17B-6EF02E4BB293" bpmnElement="_23341BB2-381E-47DC-B17B-6EF02E4BB293">
+        <dc:Bounds height="101.0" width="153.0" x="427.0" y="112.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__3A037E6E-56DB-4114-8EB8-0D4BED30FB17" bpmnElement="_3A037E6E-56DB-4114-8EB8-0D4BED30FB17">
+        <dc:Bounds height="101.0" width="153.0" x="661.0" y="112.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__46CE77CC-B374-4BA6-9C0D-D702737A81AE" bpmnElement="_46CE77CC-B374-4BA6-9C0D-D702737A81AE">
+        <dc:Bounds height="56.0" width="56.0" x="277.0" y="135.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="shape__2F97A8A6-DF3E-48B4-BB93-DAD68F63C6D1" bpmnElement="_2F97A8A6-DF3E-48B4-BB93-DAD68F63C6D1">
+        <dc:Bounds height="56.0" width="56.0" x="1331.0" y="135.0"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="edge_shape__3A037E6E-56DB-4114-8EB8-0D4BED30FB17_to_shape__27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964" bpmnElement="_E4B668AA-1B19-4BA6-AA0E-43ADA7DBFF20">
+        <di:waypoint xsi:type="dc:Point" x="814.0" y="162.5"/>
+        <di:waypoint xsi:type="dc:Point" x="894.0" y="162.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964_to_shape__E80652AB-2F39-4728-9DE6-C0DCB425CA8B" bpmnElement="_DEF63DC2-D3A5-44EC-8A68-991FC1A0B242">
+        <di:waypoint xsi:type="dc:Point" x="1047.0" y="162.5"/>
+        <di:waypoint xsi:type="dc:Point" x="1127.0" y="162.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__E80652AB-2F39-4728-9DE6-C0DCB425CA8B_to_shape__2F97A8A6-DF3E-48B4-BB93-DAD68F63C6D1" bpmnElement="_BC0F3ED2-F4AC-40A1-B41A-9C1BCEA7CD88">
+        <di:waypoint xsi:type="dc:Point" x="1203.5" y="162.5"/>
+        <di:waypoint xsi:type="dc:Point" x="1331.0" y="163.0"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__46CE77CC-B374-4BA6-9C0D-D702737A81AE_to_shape__23341BB2-381E-47DC-B17B-6EF02E4BB293" bpmnElement="_C2D83ADD-FDBA-4DBC-94CF-EA75A63876C6">
+        <di:waypoint xsi:type="dc:Point" x="305.0" y="163.0"/>
+        <di:waypoint xsi:type="dc:Point" x="427.0" y="162.5"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="edge_shape__23341BB2-381E-47DC-B17B-6EF02E4BB293_to_shape__3A037E6E-56DB-4114-8EB8-0D4BED30FB17" bpmnElement="_7B123E02-9FD0-4313-AAD7-D3386139B66C">
+        <di:waypoint xsi:type="dc:Point" x="503.5" y="162.5"/>
+        <di:waypoint xsi:type="dc:Point" x="661.0" y="162.5"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+  <bpmn2:relationship id="_oVN82kTGEe2rVOFBW7eadw" type="BPSimData">
+    <bpmn2:extensionElements>
+      <bpsim:BPSimData>
+        <bpsim:Scenario xsi:type="bpsim:Scenario" id="default" name="Simulationscenario">
+          <bpsim:ScenarioParameters xsi:type="bpsim:ScenarioParameters"/>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_27C43AAB-E09B-4AEB-BF8C-5CB65A4F8964" id="_oVN820TGEe2rVOFBW7eadw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_E80652AB-2F39-4728-9DE6-C0DCB425CA8B" id="_oVN83ETGEe2rVOFBW7eadw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_23341BB2-381E-47DC-B17B-6EF02E4BB293" id="_oVN83UTGEe2rVOFBW7eadw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_3A037E6E-56DB-4114-8EB8-0D4BED30FB17" id="_oVN83kTGEe2rVOFBW7eadw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+            <bpsim:ResourceParameters xsi:type="bpsim:ResourceParameters">
+              <bpsim:Availability xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Availability>
+              <bpsim:Quantity xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:Quantity>
+            </bpsim:ResourceParameters>
+            <bpsim:CostParameters xsi:type="bpsim:CostParameters">
+              <bpsim:UnitCost xsi:type="bpsim:Parameter">
+                <bpsim:FloatingParameter value="0.0"/>
+              </bpsim:UnitCost>
+            </bpsim:CostParameters>
+          </bpsim:ElementParameters>
+          <bpsim:ElementParameters xsi:type="bpsim:ElementParameters" elementRef="_46CE77CC-B374-4BA6-9C0D-D702737A81AE" id="_oVN830TGEe2rVOFBW7eadw">
+            <bpsim:TimeParameters xsi:type="bpsim:TimeParameters">
+              <bpsim:ProcessingTime xsi:type="bpsim:Parameter">
+                <bpsim:NormalDistribution mean="0.0" standardDeviation="0.0"/>
+              </bpsim:ProcessingTime>
+            </bpsim:TimeParameters>
+          </bpsim:ElementParameters>
+        </bpsim:Scenario>
+      </bpsim:BPSimData>
+    </bpmn2:extensionElements>
+    <bpmn2:source>_oVNVwETGEe2rVOFBW7eadw</bpmn2:source>
+    <bpmn2:target>_oVNVwETGEe2rVOFBW7eadw</bpmn2:target>
+  </bpmn2:relationship>
+</bpmn2:definitions>
